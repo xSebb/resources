@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="index.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <form>
+        <h2>Total: </h2><h2 id="amountof">0c</h2>
+        <input class="calculate" type="reset" id="reset" value="reset" onclick="Reset()">
+        <input class="calculate" type="button" id="submit" value="calculate" onclick="Add()"> <br> <br>
+
+
+        <div id="basic_recipes" class="recipes">
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Gold.png"></span>
+                <p class="item">Gold</p>
+                <input class="amount" type="text" id="goldAmount" name="gold" value=" ">
+                <p class="specificamount" id="goldspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Silver.png"></span>
+                <p class="item">Silver</p>
+                <input class="amount" type="text" id="silverAmount" name="silver" value=" ">
+                <p class="specificamount" id="silverspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Stone.png"></span>
+                <p class="item">Stone</p>
+                <input class="amount" type="text" id="stoneAmount" name="stone" value=" ">
+                <p class="specificamount" id="stonespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Coal.png"></span>
+                <p class="item">Coal</p>
+                <input class="amount" type="text" id="coalAmount" name="coal" value=" ">
+                <p class="specificamount" id="coalspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Iron.png"></span>
+                <p class="item">Iron</p>
+                <input class="amount" type="text" id="ironAmount" name="iron" value=" ">
+                <p class="specificamount" id="ironspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Rubber.png"></span>
+                <p class="item">Rubber</p>
+                <input class="amount" type="text" id="rubberAmount" name="rubber" value=" ">
+                <p class="specificamount" id="rubberspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Cotton.png"></span>
+                <p class="item">Cotton</p>
+                <input class="amount" type="text" id="cottonAmount" name="cotton" value=" ">
+                <p class="specificamount" id="cottonspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Oil.png"></span>
+                <p class="item">Oil</p>
+                <input class="amount" type="text" id="oilAmount" name="oil" value=" ">
+                <p class="specificamount" id="oilspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Green_Goop.png"></span>
+                <p class="item">Green Goop</p>
+                <input class="amount" type="text" id="greengoopAmount" name="greengoop" value=" ">
+                <p class="specificamount" id="greengoopspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Yumberries.png"></span>
+                <p class="item">Yumberries</p>
+                <input class="amount" type="text" id="yumberriesAmount" name="yumberries" value=" ">
+                <p class="specificamount" id="yumberriesspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Sunberries.png"></span>
+                <p class="item">Sunberries</p>
+                <input class="amount" type="text" id="sunberriesAmount" name="sunberries" value=" ">
+                <p class="specificamount" id="sunberriesspecific"></p>
+            </div>
+
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Frostberries.png"></span>
+                <p class="item">Frostberries</p>
+                <input class="amount" type="text" id="frostberriesAmount" name="frostberries" value=" ">
+                <p class="specificamount" id="frostberriesspecific"></p>
+            </div>
+
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Chiliberries.png"></span>
+                <p class="item">Chiliberries</p>
+                <input class="amount" type="text" id="chiliberriesAmount" name="chiliberries" value=" ">
+                <p class="specificamount" id="chiliberriesspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Beeswax.png"></span>
+                <p class="item">Beeswax</p>
+                <input class="amount" type="text" id="beeswaxAmount" name="beeswax" value=" ">
+                <p class="specificamount" id="beeswaxspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Honey.jpg"></span>
+                <p class="item">Honey</p>
+                <input class="amount" type="text" id="honeyAmount" name="honey" value=" ">
+                <p class="specificamount" id="honeyspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Red_Flower.png"></span>
+                <p class="item">Red Flower</p>
+                <input class="amount" type="text" id="redflowerAmount" name="redflower" value=" ">
+                <p class="specificamount" id="redflowerspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/White_Flower.png"></span>
+                <p class="item">White Flower</p>
+                <input class="amount" type="text" id="whiteflowerAmount" name="whiteflower" value=" ">
+                <p class="specificamount" id="whiteflowerspecific"></p>
+            </div>
+        
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Blue_Flower.png"></span>
+                <p class="item">Blue Flower</p>
+                <input class="amount" type="text" id="blueflowerAmount" name="blueflower" value=" ">
+                <p class="specificamount" id="blueflowerspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Pink_Flower.png"></span>
+                <p class="item">Pink Flower</p>
+                <input class="amount" type="text" id="pinkflowerAmount" name="pinkflower" value=" ">
+                <p class="specificamount" id="pinkflowerspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Yellow_Flower.png"></span>
+                <p class="item">Yellow Flower</p>
+                <input class="amount" type="text" id="yellowflowerAmount" name="yellowflower" value=" ">
+                <p class="specificamount" id="yellowflowerspecific"></p>
+            </div>
+        
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Wild_Red_Flower.png"></span>
+                <p class="item">Red Wild</p>
+                <input class="amount" type="text" id="redwildflowerAmount" name="redwildflower" value=" ">
+                <p class="specificamount" id="redwildflowerspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Wild_White_Flower.png"></span>
+                <p class="item">White Wild</p>
+                <input class="amount" type="text" id="whitewildflowerAmount" name="whitewildflower" value=" ">
+                <p class="specificamount" id="whitewildflowerspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Wild_Blue_Flower.png"></span>
+                <p class="item">Blue Wild</p>
+                <input class="amount" type="text" id="bluewildflowerAmount" name="bluewildflower" value=" ">
+                <p class="specificamount" id="bluewildflowerspecific"></p>
+            </div>
+        
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Sulfur.png"></span>
+                <p class="item">Sulfur</p>
+                <input class="amount" type="text" id="sulfurAmount" name="sulfur" value=" ">
+                <p class="specificamount" id="sulfurspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mineral_Deposit.png"></span>
+                <p class="item">Mineral</p>
+                <input class="amount" type="text" id="mineralAmount" name="mineral" value=" ">
+                <p class="specificamount" id="mineralspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mushroom.png"></span>
+                <p class="item">Mushroom</p>
+                <input class="amount" type="text" id="mushroomAmount" name="mushroom" value=" ">
+                <p class="specificamount" id="mushroomspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mushroom_Patch.png"></span>
+                <p class="item">Mushr Patch</p>
+                <input class="amount" type="text" id="mushroompatchAmount" name="mushroompatch" value=" ">
+                <p class="specificamount" id="mushroompatchspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Lily_Pad.png"></span>
+                <p class="item">Lilypad</p>
+                <input class="amount" type="text" id="lilypadAmount" name="lilypad" value=" ">
+                <p class="specificamount" id="lilypadspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Water_Lily.png"></span>
+                <p class="item">Waterlily</p>
+                <input class="amount" type="text" id="waterlilyAmount" name="waterlily" value=" ">
+                <p class="specificamount" id="waterlilyspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Bones.png"></span>
+                <p class="item">Bones</p>
+                <input class="amount" type="text" id="bonesAmount" name="bones" value=" ">
+                <p class="specificamount" id="bonesspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Shell.png"></span>
+                <p class="item">Shell</p>
+                <input class="amount" type="text" id="shellAmount" name="shell" value=" ">
+                <p class="specificamount" id="shellspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Fast_Geyser.png"></span>
+                <p class="item">Geysers</p>
+                <input class="amount" type="text" id="geyserAmount" name="geyser" value=" ">
+                <p class="specificamount" id="geyserspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Purple_Crystal.png"></span>
+                <p class="item">Purple Crystal</p>
+                <input class="amount" type="text" id="purplecrystalAmount" name="purplecrystal" value=" ">
+                <p class="specificamount" id="purplecrystalspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Glow_Shroom.png"></span>
+                <p class="item">Deep Shroom</p>
+                <input class="amount" type="text" id="deepmushroomAmount" name="deepmushroom" value=" ">
+                <p class="specificamount" id="deepmushroomspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Jagged_Rocks.png"></span>
+                <p class="item">Jagged Rocks</p>
+                <input class="amount" type="text" id="jaggedrocksAmount" name="jaggedrocks" value=" ">
+                <p class="specificamount" id="jaggedrocksspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Stalagmite.png"></span>
+                <p class="item">Stalagmite</p>
+                <input class="amount" type="text" id="stalagmiteAmount" name="stalagmite" value=" ">
+                <p class="specificamount" id="stalagmitespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mega_Stalagmite.png"></span>
+                <p class="item">Mega Stalag</p>
+                <input class="amount" type="text" id="megastalagmiteAmount" name="megastalagmite" value=" ">
+                <p class="specificamount" id="megastalagmitespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Stalagmite_Bunch.png"></span>
+                <p class="item">Buncha Stalag</p>
+                <input class="amount" type="text" id="bunchastalagmiteAmount" name="bunchastalagmite" value=" ">
+                <p class="specificamount" id="bunchastalagmitespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Purple_Magic_Dust.png"></span>
+                <p class="item">Purple Dust</p>
+                <input class="amount" type="text" id="purpledustAmount" name="purpledust" value=" ">
+                <p class="specificamount" id="purpledustspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Red_Magic_Dust.png"></span>
+                <p class="item">Red Dust</p>
+                <input class="amount" type="text" id="reddustAmount" name="reddust" value=" ">
+                <p class="specificamount" id="reddustspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Gold_Magic_Dust.png"></span>
+                <p class="item">Gold Dust</p>
+                <input class="amount" type="text" id="golddustAmount" name="golddust" value=" ">
+                <p class="specificamount" id="golddustspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Blue_Magic_Dust.png"></span>
+                <p class="item">Blue Dust</p>
+                <input class="amount" type="text" id="bluedustAmount" name="bluedust" value=" ">
+                <p class="specificamount" id="bluedustspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Cave_Floor.png"></span>
+                <p class="item">Cave Wall</p>
+                <input class="amount" type="text" id="cavewallAmount" name="cavewall" value=" ">
+                <p class="specificamount" id="cavewallspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Cave_Wall.png"></span>
+                <p class="item">Deep Cave</p>
+                <input class="amount" type="text" id="deepcavewallAmount" name="deepcavewall" value=" ">
+                <p class="specificamount" id="deepcavewallspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Cave_Lava_Cracks.png"></span>
+                <p class="item">Cave Lava</p>
+                <input class="amount" type="text" id="cavelavacracksAmount" name="cavelavacracks" value=" ">
+                <p class="specificamount" id="cavelavacracksspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Stone_Lava_Cracks.png"></span>
+                <p class="item">Stone Lava</p>
+                <input class="amount" type="text" id="stonelavacracksAmount" name="stonelavacracks" value=" ">
+                <p class="specificamount" id="stonelavacracksspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Dirt.png"></span>
+                <p class="item">Dirt</p>
+                <input class="amount" type="text" id="dirtAmount" name="dirt" value=" ">
+                <p class="specificamount" id="dirtspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mud.png"></span>
+                <p class="item">Mud</p>
+                <input class="amount" type="text" id="mudAmount" name="mud" value=" ">
+                <p class="specificamount" id="mudspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Sand.png"></span>
+                <p class="item">Sand</p>
+                <input class="amount" type="text" id="sandAmount" name="sand" value=" ">
+                <p class="specificamount" id="sandspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mesa.png"></span>
+                <p class="item">Mesa</p>
+                <input class="amount" type="text" id="mesaAmount" name="mesa" value=" ">
+                <p class="specificamount" id="mesaspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mesa_Top.png"></span>
+                <p class="item">Mesa Top</p>
+                <input class="amount" type="text" id="mesatopAmount" name="mesatop" value=" ">
+                <p class="specificamount" id="mesatopspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mountain.png"></span>
+                <p class="item">Mountain</p>
+                <input class="amount" type="text" id="mountainAmount" name="mountain" value=" ">
+                <p class="specificamount" id="mountainspecific"></p>
+            </div>
+            
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Soil.png"></span>
+                <p class="item">Soil</p>
+                <input class="amount" type="text" id="soilAmount" name="soil" value=" ">
+                <p class="specificamount" id="soilspecific"></p>
+            </div>
+            
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/lava.png"></span>
+                <p class="item">Lava</p>
+                <input class="amount" type="text" id="lavaAmount" name="lava" value=" ">
+                <p class="specificamount" id="lavaspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mountain_Grass.png"></span>
+                <p class="item">Mount Grass</p>
+                <input class="amount" type="text" id="mgrassAmount" name="mgrass" value=" ">
+                <p class="specificamount" id="mgrassspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Forest_Grass.png"></span>
+                <p class="item">Forest Grass</p>
+                <input class="amount" type="text" id="fgrassAmount" name="fgrass" value=" ">
+                <p class="specificamount" id="fgrassspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Grass.png"></span>
+                <p class="item">Grass</p>
+                <input class="amount" type="text" id="grassAmount" name="grass" value=" ">
+                <p class="specificamount" id="grassspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Tropical_Grass.png"></span>
+                <p class="item">Tropical Grass</p>
+                <input class="amount" type="text" id="tgrassAmount" name="tgrass" value=" ">
+                <p class="specificamount" id="tgrassspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Water.png"></span>
+                <p class="item">Water</p>
+                <input class="amount" type="text" id="waterAmount" name="water" value=" ">
+                <p class="specificamount" id="waterspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Pink_Coral.png"></span>
+                <p class="item">Pink Coral</p>
+                <input class="amount" type="text" id="pinkcoralAmount" name="pinkcoral" value=" ">
+                <p class="specificamount" id="pinkcoralspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Snow.png"></span>
+                <p class="item">Snow</p>
+                <input class="amount" type="text" id="snowAmount" name="snow" value=" ">
+                <p class="specificamount" id="snowspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Ice.png"></span>
+                <p class="item">Ice</p>
+                <input class="amount" type="text" id="iceAmount" name="ice" value=" ">
+                <p class="specificamount" id="icespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Dark_Raw_Stone.png"></span>
+                <p class="item">Dark Raw</p>
+                <input class="amount" type="text" id="darkrawAmount" name="darkraw" value=" ">
+                <p class="specificamount" id="darkrawspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Blue_Marble.png"></span>
+                <p class="item">Blue Marble</p>
+                <input class="amount" type="text" id="bluemarbleAmount" name="bluemarble" value=" ">
+                <p class="specificamount" id="bluemarblespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/White_Marble.png"></span>
+                <p class="item">White Marble</p>
+                <input class="amount" type="text" id="wmarbleAmount" name="wmarble" value=" ">
+                <p class="specificamount" id="wmarblespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Black_Marble.png"></span>
+                <p class="item">Black Marble</p>
+                <input class="amount" type="text" id="blackmarbleAmount" name="blackmarble" value=" ">
+                <p class="specificamount" id="blackmarblespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Emerald.png"></span>
+                <p class="item">Emerald</p>
+                <input class="amount" type="text" id="emeraldAmount" name="emerald" value=" ">
+                <p class="specificamount" id="emeraldspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Diamond.png"></span>
+                <p class="item">Diamond</p>
+                <input class="amount" type="text" id="diamondAmount" name="diamond" value=" ">
+                <p class="specificamount" id="diamondspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Ruby.png"></span>
+                <p class="item">Ruby</p>
+                <input class="amount" type="text" id="rubyAmount" name="ruby" value=" ">
+                <p class="specificamount" id="rubyspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mountain_Boulder.png"></span>
+                <p class="item">Mount Bould</p>
+                <input class="amount" type="text" id="mboulderAmount" name="mboulder" value=" ">
+                <p class="specificamount" id="mboulderspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Boulder.png"></span>
+                <p class="item">Boulder</p>
+                <input class="amount" type="text" id="boulderAmount" name="boulder" value=" ">
+                <p class="specificamount" id="boulderspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Ice_Boulder.png"></span>
+                <p class="item">Ice Boulder</p>
+                <input class="amount" type="text" id="iboulderAmount" name="iboulder" value=" ">
+                <p class="specificamount" id="iboulderspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Pine_Trunk.png"></span>
+                <p class="item">Pine Trunks</p>
+                <input class="amount" type="text" id="pitrunkAmount" name="pitrunk" value=" ">
+                <p class="specificamount" id="pitrunkspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Tree_Trunk.png"></span>
+                <p class="item">Tree Trunk</p>
+                <input class="amount" type="text" id="ttrunkAmount" name="ttrunk" value=" ">
+                <p class="specificamount" id="ttrunkspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Palm_Trunk.png"></span>
+                <p class="item">Palm Trunk</p>
+                <input class="amount" type="text" id="patrunkAmount" name="patrunk" value=" ">
+                <p class="specificamount" id="patrunkspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Dead_Tree.png"></span>
+                <p class="item">Dead Trunk</p>
+                <input class="amount" type="text" id="dtrunkAmount" name="dtrunk" value=" ">
+                <p class="specificamount" id="dtrunkspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Rubber_Tree_Trunk_2.png"></span>
+                <p class="item">Rubber Trunk</p>
+                <input class="amount" type="text" id="rtrunkAmount" name="rtrunk" value=" ">
+                <p class="specificamount" id="rtrunkspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mossy_Tree_Trunk.png"></span>
+                <p class="item">Mossy Trunk</p>
+                <input class="amount" type="text" id="motrunkAmount" name="motrunk" value=" ">
+                <p class="specificamount" id="motrunkspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Leaves.png"></span>
+                <p class="item">Leaves</p>
+                <input class="amount" type="text" id="leavesAmount" name="leaves" value=" ">
+                <p class="specificamount" id="leavesspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Sticks.png"></span>
+                <p class="item">Sticks</p>
+                <input class="amount" type="text" id="sticksAmount" name="sticks" value=" ">
+                <p class="specificamount" id="sticksspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Wild_Egg.png"></span>
+                <p class="item">Wild Egg</p>
+                <input class="amount" type="text" id="wildeggAmount" name="wildegg" value=" ">
+                <p class="specificamount" id="wildeggspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Yumberry_Bush.png"></span>
+                <p class="item">Yum Bush</p>
+                <input class="amount" type="text" id="ybushAmount" name="ybush" value=" ">
+                <p class="specificamount" id="ybushspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Frostberry_Bush.png"></span>
+                <p class="item">Frost Bush</p>
+                <input class="amount" type="text" id="fbushAmount" name="fbush" value=" ">
+                <p class="specificamount" id="fbushspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Sunberry_Bush.png"></span>
+                <p class="item">Sun Bush</p>
+                <input class="amount" type="text" id="sbushAmount" name="sbush" value=" ">
+                <p class="specificamount" id="sbushspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Chiliberry_Bush.png"></span>
+                <p class="item">Chili Bush</p>
+                <input class="amount" type="text" id="chbushAmount" name="chbush" value=" ">
+                <p class="specificamount" id="chbushspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Cotton_Bush.png"></span>
+                <p class="item">Cotton Bush</p>
+                <input class="amount" type="text" id="cobushAmount" name="cobush" value=" ">
+                <p class="specificamount" id="cobushspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Bush.png"></span>
+                <p class="item">Bush</p>
+                <input class="amount" type="text" id="bushAmount" name="bush" value=" ">
+                <p class="specificamount" id="bushspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Sugarcane.png"></span>
+                <p class="item">Sugarcane</p>
+                <input class="amount" type="text" id="sugarcaneAmount" name="sugarcane" value=" ">
+                <p class="specificamount" id="sugarcanespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Thorny_Vines.png"></span>
+                <p class="item">Thorny Vines</p>
+                <input class="amount" type="text" id="thornyvinesAmount" name="thornyvines" value=" ">
+                <p class="specificamount" id="thornyvinesspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Fern.png"></span>
+                <p class="item">Fern</p>
+                <input class="amount" type="text" id="fernAmount" name="fern" value=" ">
+                <p class="specificamount" id="fernspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Wild_Grass.png"></span>
+                <p class="item">Wild Grass</p>
+                <input class="amount" type="text" id="wildgrassAmount" name="wildgrass" value=" ">
+                <p class="specificamount" id="wildgrassspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Thorns.png"></span>
+                <p class="item">Thorns</p>
+                <input class="amount" type="text" id="thornsAmount" name="thorns" value=" ">
+                <p class="specificamount" id="thornsspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Cactus.png"></span>
+                <p class="item">Cactus</p>
+                <input class="amount" type="text" id="cactusAmount" name="cactus" value=" ">
+                <p class="specificamount" id="cactusspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Forest_Leaves.png"></span>
+                <p class="item">Forest Leaves</p>
+                <input class="amount" type="text" id="forestleavesAmount" name="forestleaves" value=" ">
+                <p class="specificamount" id="forestleavesspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Polka_Trunk.png"></span>
+                <p class="item">G Polka Trunk</p>
+                <input class="amount" type="text" id="gpolkatrunkAmount" name="gpolkatrunk" value=" ">
+                <p class="specificamount" id="gpolkatrunkspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Polka_Base.png"></span>
+                <p class="item">G Polka Base</p>
+                <input class="amount" type="text" id="gpolkabaseAmount" name="gpolkabase" value=" ">
+                <p class="specificamount" id="gpolkabasespecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mushroom_Cap.png"></span>
+                <p class="item">Mushr Cap</p>
+                <input class="amount" type="text" id="mushrcapAmount" name="mushrcap" value=" ">
+                <p class="specificamount" id="mushrcapspecific"></p>
+            </div>
+
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mushroom_Stalk.png"></span>
+                <p class="item">Mushr Stalk</p>
+                <input class="amount" type="text" id="mushrstalkAmount" name="mushrstalk" value=" ">
+                <p class="specificamount" id="mushrstalkspecific"></p>
+            </div>
+            
+            <div class="item_recipe">
+                <span><img class="texture" src="./images/Mushroom_Base.png"></span>
+                <p class="item">Mushr Base</p>
+                <input class="amount" type="text" id="mushrbaseAmount" name="mushrbase" value=" ">
+                <p class="specificamount" id="mushrbasespecific"></p>
+            </div>
+
+
+        </div>
+          <br> <br>
+
+    </form>
+
+
+
+</body>
+</html>
